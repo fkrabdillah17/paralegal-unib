@@ -1,0 +1,354 @@
+body {
+    background-color: #03204C;
+    color: #FFF;
+}
+/* Button */
+.btn-theme {
+    color:#fff;
+    border-color: #D07F23;
+}
+
+.btn-theme:active {
+    color:#fff;
+    background-color: #D07F23;
+}
+
+.btn-theme:visited {
+    color:#D07F23;
+    background-color: #fff;
+}
+
+.btn-theme:hover {
+    color: #D07F23;
+    border-width: 2px;
+}
+/* End Button */
+
+/* Text */
+.text-justify {
+    text-align: justify;
+}
+.titleBar::after {
+    content: "";
+    display: block;
+    border-bottom: 3px solid #D07F23;
+    width: 30%;
+    margin: auto;
+    padding-bottom: 5px;
+    margin-bottom: -8px;
+}
+
+.titleHead::after {
+    content: "";
+    display: block;
+    border-bottom: 3px solid #D07F23;
+    width: 30%;
+    margin: left;
+    padding-bottom: 5px;
+    margin-bottom: -8px;
+}
+/* End text */
+
+/* Nav */
+.navbar {
+    transition: all 0.4s;
+}
+
+.navbar.bg-theme {
+    background-color: #03204C;
+    font-weight: bold;
+    transition: all 0.6s ease-in-out;
+}
+
+.nav-link:hover {
+    color: #D07F23;
+}
+
+.nav-link.underline:hover::after {
+    content: "";
+    display: block;
+    border-bottom: 3px solid #d7a03a;
+    width: 80%;
+    margin: auto;
+    padding-bottom: 5px;
+    margin-bottom: -8px;
+}
+
+.nav-link {
+    color: #fff;
+}
+
+.nav-link.active {
+    color: #D07F23 !important;
+}
+
+.dropdown-item.active {
+    background-color: #D07F23;
+}
+
+.dropdown-item.active:hover {
+    color: #000;
+    background-color: transparent;
+}
+
+.dropdown-item:hover {
+    color: #D07F23;
+}
+
+.dropdown-item:hover::after {
+    content: "";
+    display: block;
+    border-bottom: 3px solid #d7a03a;
+    width: 100%;
+    margin: left;
+    padding-bottom: 5px;
+    margin-bottom: -8px;
+}
+/* End Nav */
+
+/* Carousel */
+.carousel-item.slide-home {
+    height: 100vh;
+    min-height: 350px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.carousel-item.slide-home.overlay::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: black;
+    opacity: 0.6;
+}
+
+.carousel-caption {
+    transform: translateY(-50%);
+    bottom: 0;
+    top: 58%;
+}
+.carousel-caption > h1 {
+    font-size: 62px;
+}
+
+.btn.btn-login {
+    border: #FFF solid 1px;
+    color: #FFF;
+}
+.btn.btn-login:hover {
+    border: #D07F23 solid 1px;
+    color: #D07F23;
+}
+
+.btn.btn-register {
+    border: #FFF solid 1px;
+    color: #FFF;
+}
+/* End Carousel */
+
+/* Start Medsos */
+.social-icon {
+    height: 70px;
+    width: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 27px;
+    margin-right: 11px;
+    cursor: pointer
+}
+
+.social-icon {
+    transition: 0.4s all;
+}
+
+.social-icon:hover i{
+    color: #D07F23;
+    transform: scale(1.4);
+}
+/* End Medsos */
+
+/* Card */
+.card.bg-theme {
+    background-color: #03204C !important;
+}
+.card {
+    color: #000 !important;
+}
+
+.card.card-list {
+    background-color: #03204C !important;
+}
+
+a .card-title:hover {
+    color: #D07F23 !important;
+}
+
+img.img-detail-center {
+    width: 100%;
+    height: 80vh; 
+    object-fit: cover;
+}
+/* End Card */
+
+/* Login */
+.banner-image {
+    height: 100vh;
+    background: url('/assets/files/pictures/mountain.jpg') no-repeat center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.banner-image.overlay::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: black;
+    opacity: 0.6;
+}
+
+.loginForm {
+    margin-top: 15%;
+}
+
+.btn-login-form {
+    color: #000000;
+    background-color: #ADCCE9;
+}
+
+.card-center {
+    margin-left: auto;
+    margin-right: auto;
+    transform: translateY(50%);
+    background-color: #03204C;
+    color: #fff !important;
+}
+/* End Login */
+
+/* Card */
+.card {
+    background-color: #DBDBDB !important;
+}
+/* End Card */
+
+/* Slide News */
+.carousel-inner.slide-news {
+    padding: 1em;
+  }
+  .card.slide-news {
+    margin: 0 0.5em;
+    box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+    border: none;
+  }
+  .carousel-control-prev.slide-news,
+  .carousel-control-next.slide-news {
+    background-color: #e1e1e1;
+    width: 6vh;
+    height: 6vh;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  @media (min-width: 768px) {
+    .carousel-item.slide-news {
+      margin-right: 0;
+      flex: 0 0 33.333333%;
+      display: block;
+    }
+    .carousel-inner.slide-news {
+      display: flex;
+    }
+  }
+  .card.slide-news .img-wrapper.slide-news {
+      max-width: 100%;
+      height: 13em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  .card.slide-news img {
+      max-height: 100%;
+  }
+  @media (max-width: 767px) {
+    .card.slide-news .img-wrapper.slide-news {
+      height: 17em;
+    }
+  }
+
+/* End Slide News */
+
+/* Slide Arsip */
+.carousel-inner.slide-arsip {
+    padding: 1em;
+  }
+  .card.slide-arsip {
+    margin: 0 0.5em;
+    box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+    border: none;
+  }
+  .carousel-control-prev.slide-arsip,
+  .carousel-control-next.slide-arsip {
+    background-color: #e1e1e1;
+    width: 6vh;
+    height: 6vh;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  @media (min-width: 768px) {
+    .carousel-item.slide-arsip {
+      margin-right: 0;
+      flex: 0 0 33.333333%;
+      display: block;
+    }
+    .carousel-inner.slide-arsip {
+      display: flex;
+    }
+  }
+  .card.slide-arsip .img-wrapper.slide-arsip {
+      max-width: 100%;
+      height: 13em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  .card.slide-arsip img {
+      max-height: 100%;
+  }
+  @media (max-width: 767px) {
+    .card.slide-arsip .img-wrapper.slide-arsip {
+      height: 17em;
+    }
+  }
+
+/* End Slide Arsip */
+
+/* Register */
+a.register-link {
+    text-decoration: none;
+}
+/* End Register */
+
+@media (max-width: 575.98px) {
+  
+ }
+
+ @media (max-width: 991.98px) {
+    .navbar {
+        background: #03204C;
+    }
+}

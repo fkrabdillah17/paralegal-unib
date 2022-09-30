@@ -1,0 +1,57 @@
+@extends('admin.layouts.main')
+
+@section('content')
+    <h1 class="mt-4">Slide</h1>
+    {{-- Table Data --}}
+    <a href="{{ route('admin.slide.create') }}" type="button" class="btn btn-labeled btn-primary mb-2"><span class="btn-label"><i
+                class="bi bi-plus-lg"></i></span>Tambah
+        Data</a>
+    @if (session('status'))
+        <div class="alert alert-success">
+            {{ session('status') }}
+        </div>
+    @endif
+    @if (session('warning'))
+        <div class="alert alert-warning">
+            {{ session('warning') }}
+        </div>
+    @endif
+    <div class="card mb-4">
+        <div class="card-header">
+            <i class="fas fa-table me-1"></i>
+            Tabel Data Slide
+        </div>
+        <div class="card-body">
+            <table id="datatablesSimple">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th class="col-9">Judul</th>
+                        <th class="col-3">Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach ($slide as $data)
+                        <tr>
+                            <td>{{ $loop->iteration }}</td>
+                            <td>{{ $data->title }}</td>
+                            <td class="col-2 text-center">
+                                <a href="{{ route('admin.slide.show', $data->id) }}" type="button" data-bs-toggle="tooltip" data-bs-placement="top"
+                                    title="Detail Data"><i class="bi bi-info-square-fill text-info" style="font-size: 30px"></i></a>
+                                <a href="{{ route('admin.slide.edit', $data->id) }}" type="button" data-bs-toggle="tooltip" data-bs-placement="top"
+                                    title="Edit Data"><i class="bi bi-pencil-square text-warning" style="font-size: 30px"></i></a>
+                                <form action="{{ route('admin.slide.destroy', $data->id) }}" class="d-inline" method="post"
+                                    onsubmit="return confirm('Apakah Anda Yakin Menghapus Data?')">
+                                    @method('delete')
+                                    @csrf
+                                    <button data-bs-toggle="tooltip" data-bs-placement="top" title="Hapus Data" class="border-0 bg-transparent"><i
+                                            class="bi bi-trash-fill text-danger" style="font-size: 30px"></i></button>
+                                </form>
+                            </td>
+                        </tr>
+                    @endforeach
+                </tbody>
+            </table>
+        </div>
+    </div>
+@endsection

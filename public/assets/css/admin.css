@@ -1,0 +1,41 @@
+.no-bg-color-hover {
+    background-color: transparent !important;
+}
+
+.btn-label {
+	position: relative;
+	left: -12px;
+	display: inline-block;
+	padding: 6px 12px;
+	background: rgba(0, 0, 0, 0.15);
+	border-radius: 3px 0 0 3px;
+}
+
+.btn-labeled {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.text-justify {
+    text-align: justify !important;
+}
+.col {
+    position: relative;
+    width: 100%;
+}
+
+.overlay {
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background: black;
+    opacity: 0.6;
+}
+/* .btn {
+	margin-bottom: 10px;
+} */
